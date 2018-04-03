@@ -21,10 +21,10 @@ options(httr_oauth_cache=T)
 
 # Credenciales TWITTER
 
-consumer_key <- "	ji9XQC7S1LuAlZrTBp12WKmmB"
-consumer_secret <-"6Gc4i2sDiuB4BX5OWop236A43fjgrKhAVfiu04CBl5EMYrUnHR"
-access_token <-"76430855-vhRbqMaPaMt0hReQBCkyO6cczoBs3XnKsIkMP9Kuy"
-access_secret <-"fojoqB3xURkyCZ0WB01WubQuw85j8k9SkyBVz7Uxf1Vcn"
+consumer_key <- "	"
+consumer_secret <- " "
+access_token <- " "
+access_secret <- " "
 
 # Autenticación API TWITTER
 
@@ -81,20 +81,14 @@ txtclean = gsub("ã±", "ñ", txtclean)
 txtclean = gsub("ã¨", "e", txtclean)
 txtclean = gsub("ã²", "o", txtclean)
 txtclean = gsub("ã", "i", txtclean)
-
-
 txtclean = gsub("ç", "c", txtclean)
 txtclean = gsub("ã±", "ñ", txtclean)
 txtclean = gsub("Ã", "ñ ", txtclean)
-
 txtclean = gsub("á", "a", txtclean)
 txtclean = gsub("é", "e", txtclean)
 txtclean = gsub("í", "i", txtclean)
 txtclean = gsub("ó", "o", txtclean)
 txtclean = gsub("ú", "u", txtclean)
-
-
-
 
 # remueve links
 txtclean = gsub("http\\w+", "", txtclean)
@@ -111,9 +105,8 @@ corpus = tm_map(corpus, removeWords, c(stopwords("spanish"), "freddyvillabona"))
 
 # carga archivo de palabras vacías personalizada y lo convierte a ASCII
 
-sw <- read.csv("C:/Users/Roxana/Desktop/workR/palabras.txt", sep="", encoding="utf-8")
+sw <- read.csv("C:/Users/Freddy/Desktop/workR/palabras.txt", sep="", encoding="utf-8")
 
-#sw <- readLines("D:/DMprojects/R/palabras.txt",encoding="UTF-8")
 sw = iconv(sw, to="ASCII//TRANSLIT")
 
 # remueve palabras vacías personalizada
@@ -134,9 +127,5 @@ wf <- sort(rowSums(m),decreasing=TRUE)
 # crea un data frame con las palabras y sus frecuencias
 dm <- data.frame(word = names(wf), freq=wf)
 
-#text(x=0.5, y=0.5, "Palabras mas compartidas en las ultimas 2 horas en #LaLigaxESPN")
-
 # grafica la nube de palabras (wordcloud)
-
-
 wordcloud(dm$word, dm$freq, random.order=FALSE, colors=brewer.pal(8, "Dark2"),scale=c(5, 1),min.freq =5)
