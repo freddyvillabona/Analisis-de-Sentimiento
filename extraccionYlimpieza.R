@@ -40,17 +40,14 @@ if (file.exists(credentials_file)){
   save(cred, file = credentials_file)
 }
 
-
 # Recolecta tweets con palabra, frases y nombre de usuario
 tweets <- searchTwitter("venezuela", n=1000, lang="es")
-
 
 #tweets = userTimeline("freddyvillabona", 1000)
 tweets
 
 # Recolecta tweets con palabra, frases y nombre de usuario en ubucación especifica 
 #tweets <- searchTwitter("venezuela",n=100,lang="es",geocode='42.375,-71.1061111,10mi')
-
 
 # Tweets a data fragme
 df = twListToDF(tweets)
