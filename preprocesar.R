@@ -1,38 +1,41 @@
 # PREPROCESAMIENTO DE DATOS
 #
-# Una vez extraidos los datos y teniendo una exploraciÛn previa de su contenido, ser· necesario realizar un preprocesamiento en el cual se seleccionar· lo que sea de nuestra convenencia para el estudio especifico que se ha planteado
+# Una vez extraidos los datos y teniendo una exploraci√≥n previa de su contenido, ser√° necesario realizar un preprocesamiento en el cual se seleccionar√° lo que sea de nuestra convenencia para el estudio especifico que se ha planteado
 #
 
 library("utf8"); 
 library("NLP")
 library("tm");
 library("RColorBrewer");
-library("dplyr");         # Con funciones auxiliares para manipular y transformar datos. En particular, el operador %>% permite escribir funciones m·s legibles para seres humanos.
+library("dplyr");         # Con funciones auxiliares para manipular y transformar datos. En particular, el operador %>% permite escribir funciones m√°s legibles para seres humanos.
 library("tidyr");
 library("readr");         # Facilita leer y escribir documentos.
 library("SnowballC");
 library("wordcloud2");    # Nube de palabras
-library("ggplot2");       # Gr·ficos
+library("ggplot2");       # Gr√°ficos
 library("wordcloud");
-# Importar datos previamente extraidos a travÈs del API de Twitter 
+
+# Importar datos previamente extraidos a trav√©s del API de Twitter 
 #tws <- read.csv("~/R/extraccion.csv", comment.char="#", encoding="ISO-8859-13")
 tws <- read.csv("BDENTERA2.csv", comment.char="#", encoding="ISO-8859-13")
 
 tws[1:3, ]
 # Detalles de la base de datos
+
 str(tws)
 attach(tws)
 
 # Se seleccionan los documentos que contienen los textos (Cada documento es representado por un Tweet)
+
 docs <- data.frame(text)
 attach(docs)
 docs = text
 docs = as.character(docs)
-# Se inicia la limpieza de informaciÛn no ˙til para nuestro estudio
+
+# Se inicia la limpieza de informaci√≥n no √∫til para nuestro estudio
 #
 # remover RT
 docs = gsub("( RT | via ) ( (?:\\b\\W*@\\w+)+)", " ", docs)
-
 
 # Eliminar direcciones web
 docs = gsub("http\\S*", " ", docs)
@@ -43,25 +46,25 @@ docs = gsub("http\\w+", " ", docs)
 # remover @OTRASCUENTAS
 docs = gsub("@\\w+", " ", docs)
 
-# remueve simbolos de puntuaciÛn
+# remueve simbolos de puntuaci√≥n
 docs = gsub("[[:punct:]]", " ", docs)
 
-# remove n˙meros
+# remove n√∫meros
 docs = gsub("[[:digit:]]", " ", docs)
 
-# remueve saltos de lÌnea y tabulaciones
+# remueve saltos de l√≠nea y tabulaciones
 docs = gsub("[[:cntrl:]]", "", docs)
 
 
 
 
 
-# CorrecciÛn de errores de acentuaciÛn por teclado...
-docs = gsub("‡", "·", docs)
-docs = gsub("Ë", "È", docs)
-docs = gsub("Ï", "Ì", docs)
-docs = gsub("Ú", "Û", docs)
-docs = gsub("˘", "˙", docs)
+# Correcci√≥n de errores de acentuaci√≥n por teclado...
+docs = gsub("√†", "√°", docs)
+docs = gsub("√®", "√©", docs)
+docs = gsub("√¨", "√≠", docs)
+docs = gsub("√≤", "√≥", docs)
+docs = gsub("√π", "√∫", docs)
 
 
 
@@ -72,14 +75,14 @@ docs <- removeWords(docs, words = stopwords("spanish"))
 docs <- removeWords(docs,c("rt"))
 docs <- stripWhitespace(docs)
 
-## INCONVENIENTE : En vista de presentar inconvenientes con los acentos queda pendiente resolver la codificaciÛn.... 
+## INCONVENIENTE : En vista de presentar inconvenientes con los acentos queda pendiente resolver la codificaci√≥n.... 
 
-docs = gsub("·", "a", docs)
-docs = gsub("È", "e", docs)
-docs = gsub("Ì", "i", docs)
-docs = gsub("Û", "o", docs)
-docs = gsub("˙", "u", docs)
-docs = gsub("Ò", "n", docs)
+docs = gsub("√°", "a", docs)
+docs = gsub("√©", "e", docs)
+docs = gsub("√≠", "i", docs)
+docs = gsub("√≥", "o", docs)
+docs = gsub("√∫", "u", docs)
+docs = gsub("√±", "n", docs)
 
 sw <- readLines("stopwords.txt",encoding="latin1")
 sw = iconv(sw, to="ASCII//TRANSLIT")
@@ -89,21 +92,17 @@ docsCORPUS = tm_map(docsCORPUS, removeWords, sw)
 # REGRESAR CORPUS A DATA FRAME
 docs <- data.frame(text = sapply(docsCORPUS, as.character), stringsAsFactors = FALSE)
 
-
 # GUARDAR LOS DATOS DE TEXTO CON SU LIMPIEZA REALIZADA
 #write.csv(docs, file="LIMPIEZA.csv",fileEncoding = "latin1")
 write.csv(docs, file="BDLIMPIEZA2noche.csv")
 
-
-
-
-# Utilizando la funciÛn Corpus(), indicamos la fuente de nuestro texto
+# Utilizando la funci√≥n Corpus(), indicamos la fuente de nuestro texto
 docs <- Corpus(VectorSource(docs))
 
 # Verificar que el corpus se haya creado correctamente 
 VCorpus(VectorSource(docs))
 
-# Para verificar que el archivo se cargÛ correctamente, se procede con la funciÛn inspect() y mostrar el contenido del documento 1 al 3
+# Para verificar que el archivo se carg√≥ correctamente, se procede con la funci√≥n inspect() y mostrar el contenido del documento 1 al 3
 #inspect(docs[1:7])
 
 # Mostrar el contenido del documento 1 y la cantidad de caracteres que contiene 
@@ -122,23 +121,22 @@ sw = iconv(sw, to="ASCII//TRANSLIT")
 docs = tm_map(docs, removeWords, sw)
 
 
-# Se contruye la matriz term-document, la cual es una tabla que contiene la frecuencia de las palabras. Esta matriz es el insumo principal para la construcci√≥n de la nube de palabras.
+# Se contruye la matriz term-document, la cual es una tabla que contiene la frecuencia de las palabras. Esta matriz es el insumo principal para la construcci√É¬≥n de la nube de palabras.
 mtd <- TermDocumentMatrix(docs)
 
-# Muestra la cantidad de terminos totales y los documentos, adem·s muestra el termino con m·s apariciones (cantidad)
+# Muestra la cantidad de terminos totales y los documentos, adem√°s muestra el termino con m√°s apariciones (cantidad)
 mtd
 
 m <- as.matrix(mtd)
 
 # Conteo de terminos y mostrados en forma decreciente
 ##
-# En Èsta primera muestra de los datos recopilados, se encuentran direcciones web, caracteres, emoticons, entre otros. 
+# En √©sta primera muestra de los datos recopilados, se encuentran direcciones web, caracteres, emoticons, entre otros. 
 #
 v <- sort(rowSums(m),decreasing=TRUE)
 
 # Se asigna nombre a las variables que representan los terminos y sus respectivas frecuancias en cada termino
 d <- data.frame(word = names(v),freq=v)
-
 
 # Listamos los terminos mas frecuentes encontrados en la totalidad de documentos extraidos de Twitter
 d1 = d[1:5, ]      # 5 mas frecuentes
@@ -147,23 +145,24 @@ d3 = d[1:20, ]     # 20 mas frecuentes
 d4 = d[1:50, ]     # 50 mas frecuentes
 d5 = d[1:100, ]     # 50 mas frecuentes
 d6 = d[1:1000, ]
-# Gr·fico con las 20 palabras mas frecuentes 
+
+# Gr√°fico con las 20 palabras mas frecuentes 
 d[1:20, ] %>%
   ggplot(aes(word, freq)) +
   geom_bar(stat = "identity", color = "black", fill = "#87CEFA") +
   geom_text(aes(hjust = 1.3, label = freq)) + 
   coord_flip() + 
-  labs(title = "Veinte palabras m·s frecuentes en los 85688 documentos extraidos de Twitter",  x = "Terminos", y = "N˙mero de frecuencias en el total de los documentos")
+  labs(title = "Veinte palabras m√°s frecuentes en los 85688 documentos extraidos de Twitter",  x = "Terminos", y = "N√∫mero de frecuencias en el total de los documentos")
 
-# Gr·fico con las 10 palabras mas frecuentes 
+# Gr√°fico con las 10 palabras mas frecuentes 
 d[1:10, ] %>%
   ggplot(aes(word, freq)) +
   geom_bar(stat = "identity", color = "black", fill = "#87CEFA") +
   geom_text(aes(hjust = 1.3, label = freq)) + 
   coord_flip() + 
-  labs(title = "Veinte palabras m·s frecuentes en los documentos extraidos de Twitter",  x = "Terminos", y = "N˙mero de usos en el total de los docuemntos")
+  labs(title = "Veinte palabras m√°s frecuentes en los documentos extraidos de Twitter",  x = "Terminos", y = "N√∫mero de usos en el total de los docuemntos")
 
-# Gr·fico con las 20 palabras mas frecuentes 
+# Gr√°fico con las 20 palabras mas frecuentes 
 d %>%
   mutate(perc = (freq/sum(freq))*100) %>%
   .[1:20, ] %>%
@@ -171,10 +170,10 @@ d %>%
   geom_bar(stat = "identity", color = "black", fill = "#87CEFA") +
   geom_text(aes(hjust = 1.3, label = round(perc, 2))) + 
   coord_flip() +
-  labs(title = "Veinte palabras m·s frecuentes en los documentos extraidos de Twitter",  x = "Terminos", y = "Porcentaje de uso en el total de los docuemntos")
+  labs(title = "Veinte palabras m√°s frecuentes en los documentos extraidos de Twitter",  x = "Terminos", y = "Porcentaje de uso en el total de los docuemntos")
 
 
-# Gr·fico con las 10 palabras mas frecuentes 
+# Gr√°fico con las 10 palabras mas frecuentes 
 d %>%
   mutate(perc = (freq/sum(freq))*100) %>%
   .[1:10, ] %>%
@@ -182,7 +181,7 @@ d %>%
   geom_bar(stat = "identity", color = "black", fill = "#87CEFA") +
   geom_text(aes(hjust = 1.3, label = round(perc, 2))) + 
   coord_flip() +
-  labs(title = "Diez palabras m·s frecuentes en los documentos extraidos de Twitter",  x = "Terminos", y = "Porcentaje de uso en el total de los docuemntos")
+  labs(title = "Diez palabras m√°s frecuentes en los documentos extraidos de Twitter",  x = "Terminos", y = "Porcentaje de uso en el total de los docuemntos")
 
 
 # Nube de palabras con el paquete worcloud2
@@ -196,7 +195,7 @@ wordcloud2(data = d4, size = 0.9, shape = "cloud", color="random-dark", elliptic
 
 wordcloud2(data = d6, size = 0.9, shape = "cloud", color="random-dark", ellipticity = 1)
 
-# El termino "Venezuela" por ser utilizado como busqueda, terminos como "los", "la", "el", entre otros, son los que m·s apariciones tienen.
+# El termino "Venezuela" por ser utilizado como busqueda, terminos como "los", "la", "el", entre otros, son los que m√°s apariciones tienen.
 
-# Se requiere realizar una limpieza de los datos, con los documentos y terminos que ser·n valiosos para el estudio de Analisis de Sentimiento, donde se deben descartar, caracteres especiales, emoticons, direcciones web, entre otros.... y centrarse netamente en los terminos que permitan generar conclusiones. 
+# Se requiere realizar una limpieza de los datos, con los documentos y terminos que ser√°n valiosos para el estudio de Analisis de Sentimiento, donde se deben descartar, caracteres especiales, emoticons, direcciones web, entre otros.... y centrarse netamente en los terminos que permitan generar conclusiones. 
 
