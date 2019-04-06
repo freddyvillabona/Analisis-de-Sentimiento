@@ -1,6 +1,6 @@
 # PREPROCESAMIENTO DE DATOS
 #
-# Una vez extraidos los datos y teniendo una exploraciÃÂ³n previa de su contenido, serÃÂ¡ necesario realizar un preprocesamiento en el cual se seleccionarÃÂ¡ lo que sea de nuestra convenencia para el estudio especifico que se ha planteado
+# Una vez extraidos los datos y tenie
 #
 
 library("utf8"); 
@@ -12,11 +12,13 @@ library("tidyr");
 library("readr");         # Facilita leer y escribir documentos.
 library("SnowballC");
 library("wordcloud2");    # Nube de palabras
-library("ggplot2");       # GrÃÂ¡ficos
+library("ggplot2");       # Gráficos
 library("wordcloud");
 library("tidyverse")
 library("tidytext")
-# Cargando base de datos y agregando etiqueta
+
+# Cargando base de datos previamente realizada su limpieza y agregando etiqueta con el día de la extraccíon.
+# 4
 
 #venteel23_19.csv
 BD1 <- read.csv("venteel23_19.csv", comment.char="#", encoding="ISO-8859-13") %>%
