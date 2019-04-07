@@ -1,10 +1,10 @@
-library("tidyverse")
-library("tidytext")
-library("tm")
-library("lubridate")
-library("zoo")
-library("scales")
-library("dplyr")
+library("tidyverse");
+library("tidytext");
+library("tm");
+library("lubridate");
+library("zoo");
+library("scales");
+library("dplyr");
 
 # Tema para los gráficos
 
