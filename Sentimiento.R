@@ -7,6 +7,7 @@ library("scales")
 library("dplyr")
 
 # Tema para los gr√°ficos
+
 tema_graf <-
   theme_minimal() +
   theme(text = element_text(family = "serif"),
@@ -31,16 +32,11 @@ tuits <- select(tuits,text,screenName,favoriteCount,retweetCount,created,id,etiq
 # Sumar los favoritos con RT y  almacenarlos en la variable interaccion 
 tuits$interaccion = rowSums (tuits[ , 3:4])
 
-#tuits <- select(tuits,id,created,etiqueta)
-
-
-
-#tuits <- cbind(tuits,tuits1)
-
-
+tuits <- select(tuits,id,created,etiqueta)
+tuits <- cbind(tuits,tuits1)
 
 # SELECCIONAR VARIABLES DE TRABAJO
-#tuits <- select(tuits,id,created,etiqueta,text)
+tuits <- select(tuits,id,created,etiqueta,text)
 
 afinn <- read.csv("lexico_afinn_SIN_ACENTOS.csv", stringsAsFactors = F, fileEncoding = "latin1") %>%
   tbl_df()
@@ -79,13 +75,13 @@ tuits <-
 tuits_afinn %>%
   count(Tendencias)
 
-# ⁄nicas
+# √önicas
 tuits_afinn %>% 
   group_by(Tendencias) %>% 
   distinct(Palabra) %>% 
   count()
 
-# palabras positivas y negativas m·s usadas por cada tendencia
+# palabras positivas y negativas m√°s usadas por cada tendencia
 
 map(c("Positiva", "Negativa"), function(sentimiento) {
   tuits_afinn %>%
@@ -103,10 +99,6 @@ map(c("Positiva", "Negativa"), function(sentimiento) {
     tema_graf
 })
 
-#
-#
-#
-
 conteo_palabras <- tuits_afinn %>% 
   group_by(Tipo) %>% 
   count(Palabra) 
@@ -122,10 +114,6 @@ conteo_palabras %>%
   labs(y = "Cantidad por palabra", x = "Palabras o terminos") +
   coord_flip()
 
-#
-#
-
-#
 mapeo <- tuits_afinn %>% 
 select(Tipo,Tendencias,Puntuacion)
 
@@ -144,13 +132,15 @@ ggplot(mapeo, aes(index, factor(Tendencias, levels = sort(unique(Tendencias), de
 #
 #
 #
-# Los terminos "lucha" y "Maduro" no necesariamente representan para el lÈxico en espaÒol termirnos referentes a algo NEGATIVO o POSITIVO respectivamente, por lo cual ser·n sacadas de nuestro analisis para evitar sesgos mayores en los resultados.... 
+# Los terminos "lucha" y "Maduro" no necesariamente representan para el l√©xico en espa√±ol termirnos referentes a algo NEGATIVO o POSITIVO respectivamente, por lo cual ser√°n sacadas de nuestro analisis para evitar sesgos mayores en los resultados.... 
+
 tuits_afinn <-
   tuits_afinn %>%
   filter(Palabra != "lucha")%>%
   filter(Palabra != "maduro")
 
 #Graficamos nuevamente
+
 map(c("Positiva", "Negativa"), function(sentimiento) {
   tuits_afinn %>%
     filter(Tipo ==  sentimiento) %>%
@@ -175,7 +165,7 @@ tuits_afinn_fecha <-
   summarise(Media = mean(Puntuacion))
 tuits_afinn_fecha
 
-# Gr·ficamos nuevamente excluyendo las palabras y terminos "maduro" y "lucha"
+# Gr√°ficamos nuevamente excluyendo las palabras y terminos "maduro" y "lucha"
 
 conteo_palabras <- tuits_afinn %>% 
   group_by(Tipo) %>% 
@@ -191,7 +181,6 @@ conteo_palabras %>%
   facet_wrap(~Tipo, scales = "free_y") +
   labs(y = "Cantidad por palabra", x = "Palabras o terminos") +
   coord_flip()
-
 
 
 #Comparando sentimientos positivos y negativos
@@ -216,7 +205,7 @@ tuits %>%
   geom_boxplot() +
   tema_graf
 
-# DÌa 3 y 4 de Noviembre, quedando por revisar la presencia de (NA) 
+# D√≠a 3 y 4 de Noviembre, quedando por revisar la presencia de (NA) 
 tuits %>%
   mutate(Dia = factor(Dia)) %>% 
   ggplot() +
@@ -235,7 +224,7 @@ tuits %>%
   facet_wrap(~Tendencias) +
   tema_graf
 
-# Tendencias a travÈs del tiempo (3 y 4 de noviembre) 
+# Tendencias a trav√©s del tiempo (3 y 4 de noviembre) 
 
 tuits %>%
   ggplot() +
@@ -244,7 +233,7 @@ tuits %>%
   facet_grid(Tendencias~Dia) +
   tema_graf
 
-# Ahora se clasificaran las cuentas con la mayor cantidad de interacciones, es decir las cuentas de las cuales provinieron los mensajes con la mayor cantidad de interacciones con los usuarios para el momento de la extracciÛn.
+# Ahora se clasificaran las cuentas con la mayor cantidad de interacciones, es decir las cuentas de las cuales provinieron los mensajes con la mayor cantidad de interacciones con los usuarios para el momento de la extracci√≥n.
 
 tuits_relevantes <- select(tuits,text,screenName,interaccion,Dia,Hora)%>% 
    arrange(desc(interaccion))
@@ -252,10 +241,9 @@ tuits_relevantes <- select(tuits,text,screenName,interaccion,Dia,Hora)%>%
 cuentasRelevantes <- tuits_relevantes[1:1000, ]
 attach(cuentasRelevantes)
 
-plot(interaccion,main="Nivel de interacciÛn de los documentos",ylab="InteracciÛn",xlab="Cantidad de documentos")
+plot(interaccion,main="Nivel de interacci√≥n de los documentos",ylab="Interacci√≥n",xlab="Cantidad de documentos")
 
 View(cuentasRelevantes)
 
-
-write.csv(cuentasRelevantes, file="cuentas_Relevantes50.csv")
+write.csv(cuentasRelevantes, file="cuentas_Relevantes.csv")
 
