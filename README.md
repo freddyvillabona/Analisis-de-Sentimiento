@@ -1,9 +1,9 @@
 # Observaciones
 
-1) Extracción de tuits
+1) Extracción de tuits (API)
 2) Inspección inicial de los datos
 3) Preprocesamiento de datos
-4) Unir bases de datos (total de las peticiones realizadas a la API)
+4) Unión de bases de datos 
 5) Análisis de sentimiento (léxico AFFIN)
 6) Clasificación de cuentas relevantes
 7) Identificación de tendencias políticas 
