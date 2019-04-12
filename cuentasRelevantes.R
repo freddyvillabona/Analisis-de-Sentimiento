@@ -1,5 +1,3 @@
-
-
 library("tidyverse")
 library("tidytext")
 library("tm")
@@ -8,13 +6,13 @@ library("zoo")
 library("scales")
 library("dplyr")
 
-# Análisis de Sentimiento a cuentas de Twitter relevantes, previamente identificada en los análisis previos 
+# AnÃ¡lisis de Sentimiento a cuentas de Twitter relevantes, previamente identificada en los anÃ¡lisis previos 
 tuits <- read.csv("cuentas_Relevantes.csv", stringsAsFactors = F, fileEncoding = "latin1")
  
-# A criterio de investigador, se seleccion las 5 cuentas mas relevantes para realizar el análisis de sentimiento
-tuits <- df[1:5,]
+# A criterio de investigador, se seleccion las 5 cuentas mas relevantes para realizar el anÃ¡lisis de sentimiento
+tuits <- df[1:2500,]
 
-# Tema para los gráficos
+# Tema para los grÃ¡ficos
 tema_graf <-
   theme_minimal() +
   theme(text = element_text(family = "serif"),
@@ -60,13 +58,13 @@ tuits <-
 tuits_afinn %>%
   count(Tendencias)
 
-# Únicas
+# Ãšnicas
 tuits_afinn %>% 
   group_by(Tendencias) %>% 
   distinct(Palabra) %>% 
   count()
 
-# palabras positivas y negativas más usadas por cada tendencia
+# palabras positivas y negativas mÃ¡s usadas por cada tendencia
 
 map(c("Positiva", "Negativa"), function(sentimiento) {
   tuits_afinn %>%
