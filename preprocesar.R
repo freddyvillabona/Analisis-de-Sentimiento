@@ -15,8 +15,8 @@ library("wordcloud2");    # Nube de palabras
 library("ggplot2");       # Gráficos
 library("wordcloud");
 
-# Importar datos previamente extraidos a través del API de Twitter 
-#tws <- read.csv("~/R/extraccion.csv", comment.char="#", encoding="ISO-8859-13")
+# Importar datos previamente extraidos a través de la API de Twitter 
+
 tws <- read.csv("BDENTERA2.csv", comment.char="#", encoding="ISO-8859-13")
 
 tws[1:3, ]
@@ -55,18 +55,12 @@ docs = gsub("[[:digit:]]", " ", docs)
 # remueve saltos de línea y tabulaciones
 docs = gsub("[[:cntrl:]]", "", docs)
 
-
-
-
-
 # Corrección de errores de acentuación por teclado...
 docs = gsub("à", "á", docs)
 docs = gsub("è", "é", docs)
 docs = gsub("ì", "í", docs)
 docs = gsub("ò", "ó", docs)
 docs = gsub("ù", "ú", docs)
-
-
 
 docs <- tolower(docs)
 docs <- removeNumbers(docs)
