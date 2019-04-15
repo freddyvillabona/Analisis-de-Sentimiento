@@ -1,3 +1,5 @@
+# Análisis de Sentimiento a cuentas de Twitter relevantes, previamente identificada en los análisis previos 
+
 library("tidyverse")
 library("tidytext")
 library("tm")
@@ -6,7 +8,6 @@ library("zoo")
 library("scales")
 library("dplyr")
 
-# Análisis de Sentimiento a cuentas de Twitter relevantes, previamente identificada en los análisis previos 
 tuits <- read.csv("cuentas_Relevantes.csv", stringsAsFactors = F, fileEncoding = "latin1")
  
 # A criterio de investigador, se seleccion las 5 cuentas mas relevantes para realizar el análisis de sentimiento
