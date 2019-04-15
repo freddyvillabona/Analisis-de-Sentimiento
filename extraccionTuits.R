@@ -23,7 +23,7 @@ consumer_secret <- " "
 access_token <- " "
 access_secret <- " "
 
-# Autenticación API TWITTER
+# Autenticación (API TWITTER)
 
 options(httr_oauth_cache=TRUE)
 
