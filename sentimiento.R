@@ -19,7 +19,7 @@ tema_graf <-
 #tuits <- read.csv("BD_TOTAL.csv", stringsAsFactors = F, fileEncoding = "latin1") %>%
  # tbl_df()
 
-tuits1 <- read.csv("BDLIMPIEZA2noche.csv", comment.char="#", encoding="ISO-8859-13") %>%
+tuits1 <- read.csv("BDLIMPIEZA2.csv", comment.char="#", encoding="ISO-8859-13") %>%
   tbl_df()
 
 tuits <- read.csv("BDENTERA2.csv", comment.char="#", encoding="ISO-8859-13") %>%
