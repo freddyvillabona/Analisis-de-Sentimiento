@@ -1,8 +1,3 @@
-# PREPROCESAMIENTO DE DATOS
-#
-# Una vez extraidos los datos y tenie
-#
-
 library("utf8"); 
 library("NLP")
 library("tm");
@@ -17,8 +12,8 @@ library("wordcloud");
 library("tidyverse")
 library("tidytext")
 
-# Cargando base de datos previamente realizada su limpieza y agregando etiqueta con el día de la extraccíon.
-# 4
+# UNIR TODAS LAS BASES DE DATOS EXTRAIDAS DE TWITTER
+
 
 #venteel23_19.csv
 BD1 <- read.csv("venteel23_19.csv", comment.char="#", encoding="ISO-8859-13") %>%
