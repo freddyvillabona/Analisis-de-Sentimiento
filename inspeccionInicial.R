@@ -33,11 +33,13 @@ id_usuarios[1:10]
 nombre_deUsuario <- df$screenName
 nombre_deUsuario [1:10]
 
-#Codificación UTF-8
+#Codificación ISO-8859-13
 
 texto <- iconv(texto, "ISO-8859-13")
 texto <- iconv(texto, to="ASCII//TRANSLIT")
 #Utilizando la función Corpus(), indicamos la fuente de nuestro texto
+
+#Codificación ISO-8859-13
 
 texto <- iconv(texto, "UTF-8")
 texto <- iconv(texto, to="ASCII//TRANSLIT")
@@ -71,11 +73,7 @@ mtd <- TermDocumentMatrix(docs)
 #Muestra la cantidad de terminos totales y los documentos, además muestra el termino con más apariciones (cantidad)
 
 mtd
-## <<TermDocumentMatrix (terms: 8257, documents: 2000)>>
-## Non-/sparse entries: 22999/16491001
-## Sparsity           : 100%
-## Maximal term length: 65
-## Weighting          : term frequency (tf)
+
 m <- as.matrix(mtd)
 #Conteo de terminos y mostrados en forma decreciente. En ésta primera muestra de los datos recopilados, se encuentran direcciones web, caracteres, emoticons, entre otros.
 
@@ -87,7 +85,7 @@ d <- data.frame(word = names(v),freq=v)
 
 d[1:20, ]
 
-#Gráfico con las 20 palabras mas frecuentes
+#Gráfico con las palabras mas frecuentes
 
 d[1:20, ] %>%
   ggplot(aes(word, freq)) +
@@ -95,4 +93,12 @@ d[1:20, ] %>%
   geom_text(aes(hjust = 1.3, label = freq)) + 
   coord_flip() + 
   labs(title = "Veinte palabras más frecuentes en los documentos extraidos de Twitter",  x = "Terminos", y = "Número de usos en el total de los docuemntos")
+ de los docuemntos")
+
+d[1:50, ] %>%
+  ggplot(aes(word, freq)) +
+  geom_bar(stat = "identity", color = "black", fill = "#87CEFA") +
+  geom_text(aes(hjust = 1.3, label = freq)) + 
+  coord_flip() + 
+  labs(title = "Cincuenta palabras más frecuentes en los documentos extraidos de Twitter",  x = "Terminos", y = "Número de usos en el total de los docuemntos")
  de los docuemntos")
