@@ -1,22 +1,15 @@
 library("tidyverse")
 library("tidytext")
 library("tm")
-library("lubridate")
-library("zoo")
-library("scales")
-library("dplyr")
 library("cluster")
 library("NLP")
 library("tm");
-library("RColorBrewer");
-library("dplyr");         # Con funciones auxiliares para manipular y transformar datos. En particular, el operador %>% permite escribir funciones m·s legibles para seres humanos.
+library("dplyr");         # Con funciones auxiliares para manipular y transformar datos. En particular, el operador %>% permite escribir funciones m√°s legibles para seres humanos.
 library("tidyr");
-library("readr");         # Facilita leer y escribir documentos.
-library("SnowballC");
 library("wordcloud2");    # Nube de palabras
-library("ggplot2");       # Gr·ficos
+library("ggplot2");       # Gr√°ficos
 library("wordcloud");
-library("factoextra")
+
 
 cr <- read.csv("cuentas_Relevantes719.csv", comment.char="#", encoding="ISO-8859-13") %>%
   tbl_df()
@@ -46,8 +39,6 @@ mt3<-t(df)
 mt4 <- mt3 %>% rowSums() %>% sort(decreasing = TRUE)
 View(mt4)
 
-
-
 k1 <-kmeans(mt4,1,10)
 k2 <-kmeans(mt4,2,10)
 k3 <-kmeans(mt4,3,10)
@@ -59,7 +50,7 @@ c <- dist(mt4)
 library(factoextra)
 datos <- scale(mt4)
 fviz_nbclust(datos, FUNcluster = kmeans, method = "wss", k.max = 8) +
-  labs(title = "N˙mero Ûptimo de clusters")
+  labs(title = "N√∫mero √≥ptimo de clusters")
 
 
 silk4<- silhouette(k4$cluster,dist=c)
@@ -76,16 +67,14 @@ fviz_cluster(k3, p,a.rm = FALSE,
              main = "Partitioning Clustering Plot"
 )
 
-
-
-library(igraph)
-library(tidygraph)
-library(ggraph)
+library("igraph")
+library("tidygraph")
+library("ggraph")
 
 fviz_cluster(k3, c , ellipse.type = "convex",show.clust.cent = TRUE,ellipse = TRUE, ellipse.alpha = 0.2,
              repel = TRUE) +
   theme_bw() +
-  labs(title = "An·lisis de conglomerados") +
+  labs(title = "An√°lisis de conglomerados") +
   theme(legend.position = "none")
 
 
@@ -97,12 +86,12 @@ plot(result)
 #k <- max(result$cluster)
 
 result <- Ckmeans.1d.dp(x,k,mt4)
-plot(result, main = "Agrupamiento ponderado (n tÈrminos)", ylab="Frecuencias/tÈrmino",xlab="n", sub = "A=red , B=black , C=")
+plot(result, main = "Agrupamiento ponderado (n t√©rminos)", ylab="Frecuencias/t√©rmino",xlab="n", sub = "A=red , B=black , C=")
 
 
 plot(x, col=result$cluster, pch=result$cluster, cex=1.5,
-     main="AgrupaciÛn Univariante con k-medias estimada",
-     sub=paste("N˙mero de clusters estimado", k))
+     main="Agrupaci√≥n Univariante con k-medias estimada",
+     sub=paste("N√∫mero de clusters estimado", k))
 abline(h=result$centers, col=1:k, lty="dashed", lwd=2)
 legend("topright", paste("Cluster", 1:k), col=1:k, pch=1:k, cex=1.5, bty="n")
 
