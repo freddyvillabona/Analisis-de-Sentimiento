@@ -1,4 +1,4 @@
-# Observaciones
+# Métodologia CRISP-DM
 
 1) Extracción de tuits (API)
 2) Inspección inicial de los datos
