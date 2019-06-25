@@ -34,11 +34,12 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
 
 ## Bibliografía
 
-* [2017] *Clustering y  heatmaps*:
 
-    <https://rpubs.com/Joaquin_AR/310338>
+* [2018] *Tidy Sentiment Analysis in R*:
 
-    (Joaquin AR)
+    <https://www.datacamp.com/community/tutorials/sentiment-analysis-R#lexiconsandlyrics>
+
+    (Debbie Liske)
 
 * [2017] *Clustering y  heatmaps*:
 
