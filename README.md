@@ -4,7 +4,7 @@
 
 ![Métodologia CRISP-DM]()
 
-imagen: ![](/figures/crisp-dm.jpg) 
+imagen: ![](https://baaaf2d4-a-62cb3a1a-s-sites.googlegroups.com/site/freddyvillabona/Home/fifablog.png?attachauth=ANoY7cqIPXUBuOXTiq2fyOTJqj5isQ4Gsk4z7V_xCIs365vHju18Ht5P1D-vUGlGQ58K5ZB2PSkgis94DzeNSFY5Yi9FkTRf7yDmoYy2KW0Q5OL4eX6q2QI8VYNZNG00YRDcgzL1nkAjtphbuCbsPTlYNIdlH3f0aYGCtKi0eOxFuI6viNkp7ZTUp4qJhWlgI54YgrJ5ycUY6JIVOXVIF222_C2ysnmCtUGrkcVyf_oYDDtQ3T-5mJw%3D&attredirects=0) 
 
 https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/
 
@@ -40,4 +40,4 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
 
     <http://www.wisdom.weizmann.ac.il/~dharel/SCANNED.PAPERS/ReactiveSystems.pdf>
 
-    (Somente páginas 1-4, até antes de "What is the Problem?")
+    (Somente páginas 1-4, até antes de "What is the Problem?") hola
