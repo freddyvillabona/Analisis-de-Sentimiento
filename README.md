@@ -12,11 +12,14 @@
 
 ### Figures (Rplot)
 
+![Atributo Alt](https://sites.google.com/site/freddyvillabona/Home/github-fv.png "Atributo title Opcional")
+
+
 https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/
 
 <img src="https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/">
 
-
+https://sites.google.com/site/freddyvillabona/Home/github-fv.png
 
 ### Principales librerías utilizadas (R)
 
