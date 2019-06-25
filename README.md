@@ -62,11 +62,17 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
     (Joaquin AR)
     
     
-* [2019] *Data Science Project Template for R*:
+* [2019] *Available CRAN Packages By Name*:
 
     <https://community.rstudio.com/t/data-science-project-template-for-r/3230/11?u=benmarwick>
 
-    (Rstudio ID)
+    (R)
+    
+* [2019] *Twitter Developer*:
+
+    <https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries.html>
+
+    (Twitter Developers)
     
     
     
