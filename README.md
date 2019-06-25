@@ -14,6 +14,10 @@
 7) Clasificación de cuentas relevantes
 8) Análisis de Influencia (usuarios destacados)
 
+### Figures (Rplot)
+
+
+
 ## Bases de datos
 
 Muestra: [19-01-19 : 19-01-30] (103000 tuits) 
@@ -23,3 +27,5 @@ Muestra: [19-01-19 : 19-01-30] (103000 tuits)
 Muestra: [19-06-06 : 19-06-09] (17000 tuits)
 
 - [-> Segundo periodo](https://drive.google.com/open?id=1e4nnXCccfPPCm-AIncUJnaJvoeq4GImg)
+
+## Bibliografia
