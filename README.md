@@ -2,7 +2,7 @@
 
 ## Métodologia CRISP-DM
 
-![Métodologia CRISP-DM](https://github.com/freddyvillabona/Sentiment-Analysis/blob/master/figures/crisp-dm.jpg)
+![Métodologia CRISP-DM]()
 
 imagen: ![](/figures/crisp-dm.jpg) 
 
@@ -32,3 +32,9 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
 - [-> Segundo periodo](https://drive.google.com/open?id=1e4nnXCccfPPCm-AIncUJnaJvoeq4GImg)
 
 ## Bibliografía
+
+* [1985] *David Harel - "On the development of reactive systems"*:
+
+    <http://www.wisdom.weizmann.ac.il/~dharel/SCANNED.PAPERS/ReactiveSystems.pdf>
+
+    (Somente páginas 1-4, até antes de "What is the Problem?")
