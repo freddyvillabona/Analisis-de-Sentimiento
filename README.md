@@ -1,6 +1,6 @@
 # Análisis de Sentimiento político (Twitter - Venezuela)
 
-## metodología de trabajo CRISP-DM
+## Metodología de trabajo CRISP-DM
 
 ### Scripts (.R)
 1) Extracción de tuits (API)
@@ -16,16 +16,9 @@
 
 ![Atributo Alt](https://sites.google.com/site/freddyvillabona/Home/github-fv.png "Atributo title Opcional")
 
-
-https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/
-
-<img src="https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/">
-
-https://sites.google.com/site/freddyvillabona/Home/github-fv.png
-
 ### Principales librerías utilizadas (R)
 
-Librerías ![]() 
+![Librerías](https://sites.google.com/site/freddyvillabona/Home/github-fv.png "Atributo title Opcional")
 
 ## Bases de datos
 
