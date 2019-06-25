@@ -32,13 +32,23 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
 
 - [-> Segundo periodo](https://drive.google.com/open?id=1e4nnXCccfPPCm-AIncUJnaJvoeq4GImg)
 
+
 ## Bibliografía
+
 
 * [2018] *R for Data Science - Visualise, Model, Transform, Tidy, and Import Data*:
 
     <hhttps://r4ds.had.co.nz/>
 
     (Garrett Grolemund y Hadley Wickham)
+    
+    
+* [2017] *Spanish Stopwords for tidytext package*:
+
+    <https://jvera.rbind.io/post/2017/10/16/spanish-stopwords-for-tidytext-package/>
+
+    (jvera)
+
 
 * [2018] *Tidy Sentiment Analysis in R*:
 
