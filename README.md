@@ -1,6 +1,6 @@
-# Análisis de Sentimiento político (Twitter - Venezuela).
-## Métodologia CRISP-DM
+# Análisis de Sentimiento político (Twitter - Venezuela)
 
+## Métodologia CRISP-DM
 
 ![Métodologia CRISP-DM](https://github.com/freddyvillabona/Sentiment-Analysis/blob/master/figures/crisp-dm.jpg)
 
@@ -13,7 +13,6 @@
 6) Identificación de tendencias políticas 
 7) Clasificación de cuentas relevantes
 8) Análisis de Influencia (usuarios destacados)
-
 
 ## Bases de datos
 
