@@ -1,0 +1,20 @@
+Package: ASPES
+Title: Análisis de Sentimiento aplicado a usuarios venezolanos en Twitter para identificar su tendencia política
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "freddyvillabonac@gmail.com")
+Description: En el análisis de sentimiento aplicado en redes sociales, se busca extraer
+conocimiento a partir de datos principalmente textuales "estructurados" y "no
+estructurados", en este caso, tuits recopilados de la red social Twitter a través de su
+servicio de la API y la ayuda del computador, con la finalidad de identícar y clasificar
+la tendencia política a usuarios venezolanos. Se seguirá la metodología CRISP-DM
+aplicada a la minería de texto con los recursos disponibles.
+License: MIT + file LICENSE
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+usethis::use_package("dplyr", "imports", "tidyverse", "tidytext", "tm", "cluster", "NLP", "tm", "dplyr", "tidyr","wordcloud2","ggplot2","wordcloud", "ggpubr", "plotly")
+
