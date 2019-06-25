@@ -4,6 +4,9 @@
 
 ![Métodologia CRISP-DM](https://github.com/freddyvillabona/Sentiment-Analysis/blob/master/figures/crisp-dm.jpg)
 
+imagen: ![](figures/crisp-dm.jpg) 
+
+
 ### Scripts (.R)
 1) Extracción de tuits (API)
 2) Inspección inicial de los datos
