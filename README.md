@@ -3,12 +3,12 @@
 ## Metodología de trabajo CRISP-DM :arrows_counterclockwise:
 
 ### Scripts (.R) 
-1) Extracción de tuits (API)
+1) Extracción de tuits (API Twitter)
 2) Inspección inicial de los datos
 3) Preprocesamiento de datos
 4) Unión de bases de datos 
-5) Análisis de sentimiento (léxico AFFIN) 
-6) Identificación de tendencias políticas 
+5) Análisis de sentimiento (léxico AFFIN en español) 
+6) Identificación de tendencias políticas (Analísis de conglomerados, validaciones con el método del codo y silueta)
 7) Clasificación de cuentas relevantes
 8) Análisis de Influencia (usuarios destacados)
 
