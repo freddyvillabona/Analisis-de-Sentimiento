@@ -34,8 +34,14 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
 
 ## Bibliografía
 
-* [1985] *David Harel - "On the development of reactive systems"*:
+* [2017] *Clustering y  heatmaps*:
 
-    <http://www.wisdom.weizmann.ac.il/~dharel/SCANNED.PAPERS/ReactiveSystems.pdf>
+    <https://rpubs.com/Joaquin_AR/310338>
 
-    (Somente páginas 1-4, até antes de "What is the Problem?") hola
+    (Joaquin AR)
+
+* [2017] *Clustering y  heatmaps*:
+
+    <https://rpubs.com/Joaquin_AR/310338>
+
+    (Joaquin AR)
