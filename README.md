@@ -1,15 +1,5 @@
 # Análisis de Sentimiento político (Twitter - Venezuela)
 
-## Métodologia CRISP-DM
-
-![Métodologia CRISP-DM]()
-
-imagen: ![](https://baaaf2d4-a-62cb3a1a-s-sites.googlegroups.com/site/freddyvillabona/Home/fifablog.png?attachauth=ANoY7cqIPXUBuOXTiq2fyOTJqj5isQ4Gsk4z7V_xCIs365vHju18Ht5P1D-vUGlGQ58K5ZB2PSkgis94DzeNSFY5Yi9FkTRf7yDmoYy2KW0Q5OL4eX6q2QI8VYNZNG00YRDcgzL1nkAjtphbuCbsPTlYNIdlH3f0aYGCtKi0eOxFuI6viNkp7ZTUp4qJhWlgI54YgrJ5ycUY6JIVOXVIF222_C2ysnmCtUGrkcVyf_oYDDtQ3T-5mJw%3D&attredirects=0) 
-
-https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/
-
-<img src="https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/">
-
 ### Scripts (.R)
 1) Extracción de tuits (API)
 2) Inspección inicial de los datos
@@ -22,7 +12,15 @@ https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/
 
 ### Figures (Rplot)
 
+https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/
 
+<img src="https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/">
+
+
+
+### Principales librerías utilizadas (R)
+
+Librerías ![]() 
 
 ## Bases de datos
 
