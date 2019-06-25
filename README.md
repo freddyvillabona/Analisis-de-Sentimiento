@@ -6,6 +6,9 @@
 
 imagen: ![](/figures/crisp-dm.jpg) 
 
+https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/
+
+<img src="https://drive.google.com/file/d/1TkiSXaSxvTsrE48-iUPON5ob-F5Bx8o4/">
 
 ### Scripts (.R)
 1) Extracción de tuits (API)
