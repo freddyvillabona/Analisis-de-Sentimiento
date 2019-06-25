@@ -34,12 +34,18 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
 
 ## Bibliografía
 
+* [2018] *R for Data Science - Visualise, Model, Transform, Tidy, and Import Data*:
+
+    <hhttps://r4ds.had.co.nz/>
+
+    (Garrett Grolemund y Hadley Wickham)
 
 * [2018] *Tidy Sentiment Analysis in R*:
 
     <https://www.datacamp.com/community/tutorials/sentiment-analysis-R#lexiconsandlyrics>
 
     (Debbie Liske)
+   
 
 * [2017] *Clustering y  heatmaps*:
 
