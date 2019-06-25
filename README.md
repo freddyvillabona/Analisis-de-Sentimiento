@@ -4,7 +4,7 @@
 
 ![Métodologia CRISP-DM](https://github.com/freddyvillabona/Sentiment-Analysis/blob/master/figures/crisp-dm.jpg)
 
-### Scripts
+### Scripts (.R)
 1) Extracción de tuits (API)
 2) Inspección inicial de los datos
 3) Preprocesamiento de datos
@@ -18,4 +18,6 @@
 ## Bases de datos
 
 Muestra: [19-01-19 : 19-01-30] (103000 tuits) 
-https://drive.google.com/open?id=1e4nnXCccfPPCm-AIncUJnaJvoeq4GImg
+
+
+[Primer periodo ->](https://drive.google.com/open?id=1e4nnXCccfPPCm-AIncUJnaJvoeq4GImg)
