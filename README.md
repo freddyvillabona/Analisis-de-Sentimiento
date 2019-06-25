@@ -38,7 +38,7 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
 
 * [2018] *R for Data Science - Visualise, Model, Transform, Tidy, and Import Data*:
 
-    <hhttps://r4ds.had.co.nz/>
+    <https://r4ds.had.co.nz/>
 
     (Garrett Grolemund y Hadley Wickham)
     
@@ -62,3 +62,14 @@ Muestra: [19-06-06 : 19-06-09] (17000 tuits)
     <https://rpubs.com/Joaquin_AR/310338>
 
     (Joaquin AR)
+    
+    
+* [2019] *Data Science Project Template for R*:
+
+    <https://community.rstudio.com/t/data-science-project-template-for-r/3230/11?u=benmarwick>
+
+    (Rstudio ID)
+    
+    
+    
+   
