@@ -1,4 +1,5 @@
-# Métodologia CRISP-DM
+# Análisis de Sentimiento político (Twitter - Venezuela).
+## Métodologia CRISP-DM
 
 1) Extracción de tuits (API)
 2) Inspección inicial de los datos
