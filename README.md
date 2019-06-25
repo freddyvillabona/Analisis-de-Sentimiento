@@ -1,8 +1,8 @@
 # Análisis de Sentimiento político (Twitter - Venezuela)
 
-## Metodología de trabajo CRISP-DM
+## Metodología de trabajo CRISP-DM :arrows_counterclockwise:
 
-### Scripts (.R)
+### Scripts (.R) 
 1) Extracción de tuits (API)
 2) Inspección inicial de los datos
 3) Preprocesamiento de datos
