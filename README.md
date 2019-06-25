@@ -18,7 +18,7 @@
 
 ### Principales librerías utilizadas (R)
 
-![Librerías](https://sites.google.com/site/freddyvillabona/Home/github-fv.png "Atributo title Opcional")
+![Librerías](https://sites.google.com/site/freddyvillabona/Home/librerias.png "Atributo title Opcional")
 
 ## Bases de datos
 
