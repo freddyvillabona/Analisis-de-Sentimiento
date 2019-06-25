@@ -12,7 +12,7 @@
 7) Clasificación de cuentas relevantes
 8) Análisis de Influencia (usuarios destacados)
 
-### Figures (Rplot)
+### Figures (Rplot) :bar_chart:
 
 ![Atributo Alt](https://sites.google.com/site/freddyvillabona/Home/github-fv.png "Atributo title Opcional")
 
