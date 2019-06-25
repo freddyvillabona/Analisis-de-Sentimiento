@@ -19,5 +19,8 @@
 
 Muestra: [19-01-19 : 19-01-30] (103000 tuits) 
 
+- [-> Primer periodo](https://drive.google.com/open?id=1e4nnXCccfPPCm-AIncUJnaJvoeq4GImg)
 
-[Primer periodo ->](https://drive.google.com/open?id=1e4nnXCccfPPCm-AIncUJnaJvoeq4GImg)
+Muestra: [19-01-19 : 19-01-30] (17000 tuits) 
+
+- [-> Segundo periodo](https://drive.google.com/open?id=1e4nnXCccfPPCm-AIncUJnaJvoeq4GImg)
