@@ -1,7 +1,7 @@
 Package: ASPES
 Title: Análisis de Sentimiento aplicado a usuarios venezolanos en Twitter para identificar su tendencia política
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: Freddy Villabona C.
     person(given = "First",
            family = "Last",
            role = c("aut", "cre"),
